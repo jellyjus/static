@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Зарегистрируй код</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+    <style>
+        html, body, .container {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+        }
+
+        .text {
+            text-align: center;
+            line-height: 2;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            Твой код 👉 <b id="code"></b> 👈 <br/>
+            Отправь его боту в ТГ <a href="https://t.me/vasya_draws_bot">@vasya_draws_bot</a> для участия в розыгрыше
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById("code").innerHTML = urlParams.get('code');
+    </script>
+</body>
+</html>
